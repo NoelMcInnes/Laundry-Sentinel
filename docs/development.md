@@ -18,3 +18,11 @@ A single vibration reading can immediately change the appliance state.  Real app
 
 ### Next Step
 Add memory to the state detection logic so that multiple readings are considered before the appliance changes state.
+
+### Progress Update - State Detection
+
+- Added separate counters for active and quiet readings.
+- Requires three consecutive active readings to enter RUNNING.
+- Requires three consecutive quiet readings to enter IDLE.
+- Resets counters when an opposite reading interrupts a streak.
+- Successfully tested interrupted vibration and quiet sequences.
