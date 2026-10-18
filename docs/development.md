@@ -16,9 +16,6 @@ Build a simple Python simulator to test appliance state detection before connect
 
 A single vibration reading can immediately change the appliance state.  Real appliances may breifly become quiet during a cycle, so one low reading could incorrectly freport that the appliance has stopped.
 
-### Next Step
-Add memory to the state detection logic so that multiple readings are considered before the appliance changes state.
-
 
 ### Progress Update - State Detection
 
@@ -36,3 +33,14 @@ Add memory to the state detection logic so that multiple readings are considered
 - Added active and quiet counter reporting.
 - Added separate STATE CHANGE messages.
 - Tested both state transitions and verified counter behavior.
+
+## Progress Update - Automatic Sensor Simulation
+
+- Created auto_simulator.py.
+- Added random vibration generation.
+- Added automatic readings with a one-second delay.
+- Simulated IDLE and RUNNING vibration ranges.
+- Added a repeating 10-reading test cycle.
+- Verified transitions between simulated conditions.
+
+Next: Connect automatic readings to the state detector.
