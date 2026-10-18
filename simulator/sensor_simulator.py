@@ -7,7 +7,7 @@ state = "RUNNING"
 
 while True:
     vibration = float(input("Enter vibration level: "))
-    print(vibration)
+    print("Vibration:", vibration)
 
     if vibration > threshold:
         if state == "IDLE":
@@ -15,7 +15,7 @@ while True:
 
             if active_count >= 3:
                 state = "RUNNING"
-                print(state)
+                print("STATE CHANGE:", state)
         quiet_count = 0
       
 
@@ -24,10 +24,13 @@ while True:
         active_count = 0
         if state == "RUNNING":
             quiet_count += 1
-            print(quiet_count) 
+         
      
         if quiet_count >= 3:
             state = "IDLE"
-            print(state)
-        else: 
-            print(state)
+            print("STATE CHANGE:", state)
+    
+    
+    print("Current State:", state)
+    print("Active Count:", active_count)
+    print("Quiet Count:", quiet_count)
